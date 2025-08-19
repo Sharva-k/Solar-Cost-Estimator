@@ -16,41 +16,34 @@
     <div class="cheader">
       <h2>Enter Details</h2>
     </div>
-    <div class="d1 d"><h3>Enter area available(in sq. m)</h3><input placeholder="Enter sq. m"></div>
-    <div class="d2 d"><h3>Enter how many hours of sunlight you normally recieve</h3><input placeholder="Enter hours"></div>
-    <div class="d3 d"><h3>Daily energy usage(in kw)</h3><input placeholder="Enter energy"></div>
+    <div class="d1 d"><h3>Enter area available (in m²)</h3><input id="areaInput" type="number" min="0" step="0.1" placeholder="Enter area in m²"><small class="hint">Typical rooftop space: 20–60 m² for small homes</small></div>
+    <div class="d2 d"><h3>Average sunlight hours per day</h3><input id="sunHoursInput" type="number" min="0" step="0.1" placeholder="Enter hours"><small class="hint">Recommendation: average is ~5 hours/day</small></div>
+    <div class="d3 d"><h3>Daily energy usage (in kWh)</h3><input id="dailyUsageInput" type="number" min="0" step="0.1" placeholder="Enter kWh"><small class="hint">Typical home: 6–12 kWh/day</small></div>
     <div class="est">
     <button class="start" onclick="calculateSolar()">
     Estimate <i class="fa-solid fa-magnifying-glass"></i>
     </button>
     </div>
-  </div>
-  <!-- result section -->
-    <!-- <div id="results" class="results" style="display: none;">
-      <h3>Solar Calculation Results</h3>
-      <div class="result-row">
-        <span>Daily Energy Output:</span>
-        <span id="output"></span>
-      </div>
-      <div class="result-row">
-        <span>System Cost:</span>
-        <span id="cost"></span>
-      </div>
-      <div class="result-row">
-        <span>Energy Coverage:</span>
-        <span id="coverage"></span>
+    <div id="results" class="results" style="display: none;">
+      <h3 class="results-title">Results</h3>
+      <div class="results-table-wrap">
+        <table class="results-table">
+          <tbody>
+            <tr><th>Panels fit</th><td id="panels"></td></tr>
+            <tr><th>System capacity</th><td id="capacity"></td></tr>
+            <tr><th>Daily energy output</th><td id="output"></td></tr>
+            <tr><th>Energy coverage</th><td id="coverage"></td></tr>
+            <tr><th>Estimated system cost</th><td id="cost"></td></tr>
+            <tr><th>Annual production</th><td id="annual"></td></tr>
+            <tr><th>Estimated annual savings</th><td id="savings"></td></tr>
+            <tr><th>Payback period</th><td id="payback"></td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
-    
-    <div class="est">
-      <button class="start" onclick="calculateSolar()">
-        Estimate <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </div>
   </div>
-  
   <script src="script.js"></script>
 </body>
-</html> -->
+</html>
 
 
